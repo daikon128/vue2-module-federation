@@ -4,12 +4,13 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js',
-      template: 'public/index.html',
     },
   },
   devServer: {
-    port: 8080,
+    port:8899
   },
+  filenameHashing: true,
+  publicPath: "http://localhost:8899/",
   configureWebpack: {
     module: {
       rules: [
@@ -27,10 +28,14 @@ module.exports = {
     },
     plugins: [
       new ModuleFederationPlugin({
-        filename: 'remote.js',
-        remotes: {
-          remote: 'remote@http://localhost:8888/remote.js',
-          remote2: 'remote2@http://localhost:8899/remote2.js'
+        name: 'remote2',
+        library: {
+          type: 'var',
+          name: 'remote2'
+        },
+        filename: 'remote2.js',
+        exposes: {
+          "./CustomHeader": "./src/components/CustomHeader"
         },
       }),
     ],

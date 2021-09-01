@@ -13,7 +13,16 @@ const CustomButton = () => ({
   timeout: 3000
 })
 
+const CustomHeader = () => ({
+  component: import('remote2/CustomHeader'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
 Vue.component('custom-button', CustomButton)
+Vue.component('custom-header', CustomHeader)
 
 new Vue({
   render: h => h(App),

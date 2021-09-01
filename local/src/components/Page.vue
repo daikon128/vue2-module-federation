@@ -2,6 +2,7 @@
   <div>
     page
     <custom-button></custom-button>
+    <custom-header></custom-header>
   </div>
 </template>
 
