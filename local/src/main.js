@@ -21,8 +21,18 @@ const CustomHeader = () => ({
   timeout: 3000
 })
 
+const TodoList = () => ({
+  component: import('remote2/TodoList'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+
 Vue.component('custom-button', CustomButton)
 Vue.component('custom-header', CustomHeader)
+Vue.component('todo-list', TodoList)
 
 new Vue({
   render: h => h(App),
