@@ -1,22 +1,28 @@
 <template>
-  <div id="app">
-    <CustomHeader/>
-    <TodoSearch />
-    <TodoList />
+  <div id="app" class="background-stripe">
+    <TodoListSandbox/>
   </div>
 </template>
 
 <script>
-import CustomHeader from '@/components/CustomHeader.vue'
-import TodoSearch from "@/components/TodoSearch";
-import TodoList from "@/components/TodoList";
+import TodoListSandbox from "@/sandbox/components/TodoListSandbox";
 
 export default {
   name: 'Sandbox',
   components: {
-    CustomHeader,
-    TodoList,
-    TodoSearch
+    TodoListSandbox,
   }
 }
 </script>
+
+<style scoped>
+.background-stripe {
+  background:repeating-linear-gradient(
+      45deg,
+      #ffffff,
+      #ffffff 28.75px,
+      #dddddd 28.75px,
+      #dddddd 57.5px
+  );
+}
+</style>

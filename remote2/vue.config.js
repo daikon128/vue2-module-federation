@@ -35,7 +35,9 @@ module.exports = {
         },
         filename: 'remote2.js',
         exposes: {
-          "./CustomHeader": "./src/components/CustomHeader"
+          "./CustomHeader": "./src/components/CustomHeader",
+          "./TodoList": "./src/components/TodoList",
+          "./TodoSearch": "./src/components/TodoSearch"
         },
       }),
     ],
