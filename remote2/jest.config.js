@@ -5,6 +5,7 @@ module.exports = {
     "^.+\\.vue$": "vue-jest",
     "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
   },
+  testEnvironment: "jsdom",
   transformIgnorePatterns: ["node_modules/"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
