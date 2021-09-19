@@ -8,7 +8,12 @@
 </template>
 
 <script>
+import CustomHeader from "@/components/CustomHeader"
+
 export default {
-name: "Page"
+  name: "Page",
+  components: {
+    CustomHeader
+  }
 }
 </script>
