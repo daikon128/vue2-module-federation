@@ -5,11 +5,11 @@
     </fieldset>
     <fieldset>
       <legend>Todo Search</legend>
-      <TodoSearch />
+      <TodoSearch @search-todo-list="setTodoList"/>
     </fieldset>
     <fieldset>
       <legend>Todo List</legend>
-      <TodoList />
+      <TodoList :todo-list="todoList"/>
     </fieldset>
   </div>
 </template>
@@ -18,8 +18,20 @@
 import TodoList from "@/components/TodoList";
 import TodoSearch from "@/components/TodoSearch";
 export default {
-name: "TodoListSandbox",
-  components: {TodoSearch, TodoList}
+  name: "TodoListSandbox",
+  components: {TodoSearch, TodoList},
+  data() {
+    return {
+      todoList: []
+    }
+  },
+  methods: {
+    setTodoList(todoList) {
+      console.log("todo")
+      console.log(todoList)
+      this.todoList = todoList
+    }
+  }
 }
 </script>
 
