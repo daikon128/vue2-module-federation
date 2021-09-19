@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "cy:run": "cypress run"
+    "test:unit": "jest",
+    "test:in": "cypress run --spec 'tests/cypress/**/*.spec.js'"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -22,6 +23,7 @@
     "eslint": "^7.20.0",
     "eslint-plugin-vue": "^7.6.0",
     "jest": "^27.2.0",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.11",
     "webpack-cli": "^4.5.0"
   },

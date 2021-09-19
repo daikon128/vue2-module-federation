@@ -1,4 +1,4 @@
 {
-  "baseUrl": "http://localhost:8899",
-  "video": false
+  "integrationFolder": "./",
+  "baseUrl": "http://localhost:8899"
 }
