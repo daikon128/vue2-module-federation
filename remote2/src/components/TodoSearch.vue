@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       searchText: "",
-      todoLists: []
+      todoList: []
     }
   },
   methods: {
@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     filterdTodoList() {
-      return this.todoLists.filter(todo => (todo.title.match(this.searchText) || todo.description.match(this.searchText)))
+      return this.todoList.filter(todo => (todo.title.match(this.searchText) || todo.description.match(this.searchText)))
     }
   }
 
