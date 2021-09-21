@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "jest",
+    "test:unit": "cypress run ",
+    "test": "cypress run --spec 'tests/unit/**/*.spec.js'",
     "test:in": "cypress run --spec 'tests/cypress/**/*.spec.js'",
     "start": "http-server -c-1 -p 8899 ./dist"
   },

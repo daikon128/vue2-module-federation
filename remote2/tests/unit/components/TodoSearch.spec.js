@@ -1,5 +1,5 @@
-import {mount} from "@cypress/vue";
-import TodoSearch from "@/components/TodoSearch";
+import {mount} from "@cypress/vue"
+import TodoSearch from "../../../src/components/TodoSearch.vue"
 
 describe('TodoSearch', () => {
   function createWrapper() {

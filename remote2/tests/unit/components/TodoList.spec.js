@@ -1,5 +1,5 @@
 import { mount } from '@cypress/vue'
-import TodoList from "@/components/TodoList";
+import TodoList from "../../../src/components/TodoList";
 
 describe('TodoList', () => {
   function createWrapper(todoList) {
