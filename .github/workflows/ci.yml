@@ -1,7 +1,7 @@
 name: ci
 on: [push]
 jobs:
-  cypress-run:
+  remote2-ci:
     defaults:
       run:
         working-directory: remote2
