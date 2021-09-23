@@ -4,7 +4,7 @@ jobs:
   remote2-ci:
     defaults:
       run:
-        working-directory: remote2
+        working-directory: ./remote2
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
