@@ -1,0 +1,37 @@
+name: ci
+on: [push]
+jobs:
+  cypress-run:
+    defaults:
+      run:
+        working-directory: remote2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build App
+        run: npm run build
+
+      - name: Start App
+        run: npm run start &
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test:ci
