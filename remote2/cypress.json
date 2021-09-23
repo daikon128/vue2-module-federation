@@ -3,6 +3,8 @@
   "baseUrl": "http://localhost:8899",
   "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
   "pluginsFile": "./tests/cypress/plugins/index.js",
+  "fixturesFolder": false,
+  "supportFile": false,
   "componentFolder": "./tests/unit/components",
   "testFiles": "**/*.spec.js"
 }
