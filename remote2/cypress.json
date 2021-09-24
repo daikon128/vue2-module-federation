@@ -5,6 +5,7 @@
   "pluginsFile": "./tests/cypress/plugins/index.js",
   "fixturesFolder": false,
   "supportFile": false,
+  "screenshotOnRunFailure": false,
   "video": false,
   "componentFolder": "./tests/unit/components",
   "testFiles": "**/*.spec.js"
