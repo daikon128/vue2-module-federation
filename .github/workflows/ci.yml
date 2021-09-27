@@ -10,18 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: remote-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            remote-${{ runner.os }}-build-${{ env.cache-name }}-
-            remote-${{ runner.os }}-build-
-            remote-${{ runner.os }}-
-
       - name: Install dependencies
         run: npm install
 
@@ -45,18 +33,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: remote2-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            remote2-${{ runner.os }}-build-${{ env.cache-name }}-
-            remote2-${{ runner.os }}-build-
-            remote2-${{ runner.os }}-
 
       - name: Install dependencies
         run: npm install
