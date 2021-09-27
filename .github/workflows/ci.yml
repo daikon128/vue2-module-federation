@@ -22,7 +22,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          working-directory: remote2
+          working-directory: remote
           command: npm run test:ci
 
   remote2-ci:
