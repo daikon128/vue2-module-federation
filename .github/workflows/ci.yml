@@ -47,4 +47,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           working-directory: remote2
-          command: npm run test:c
+          command: npm run test:ci
