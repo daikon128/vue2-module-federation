@@ -5,14 +5,6 @@ import ErrorComponent from "@/components/ErrorComponent";
 
 Vue.config.productionTip = false
 
-const CustomButton = () => ({
-  component: import('remote/CustomButton'),
-  loading: LoadingComponent,
-  error: ErrorComponent,
-  delay: 200,
-  timeout: 3000
-})
-
 const TodoList = () => ({
   component: import('remote2/TodoList'),
   loading: LoadingComponent,
@@ -22,7 +14,6 @@ const TodoList = () => ({
 })
 
 
-Vue.component('custom-button', CustomButton)
 Vue.component('todo-list', TodoList)
 
 new Vue({

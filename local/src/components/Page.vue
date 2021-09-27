@@ -1,9 +1,8 @@
 <template>
   <div>
     page
-    <custom-button></custom-button>
     <custom-header></custom-header>
-    <todo-list></todo-list>
+    <todo-list :todoList="todoList"></todo-list>
   </div>
 </template>
 
@@ -14,6 +13,11 @@ export default {
   name: "Page",
   components: {
     CustomHeader
+  },
+  data() {
+    return {
+      todoList:[]
+    }
   }
 }
 </script>
