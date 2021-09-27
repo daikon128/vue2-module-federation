@@ -17,6 +17,7 @@
     "@cypress/vue": "^2.2.3",
     "@cypress/webpack-dev-server": "^1.6.0",
     "@vue/cli-plugin-babel": "^5.0.0-alpha.3",
+    "@vue/cli-plugin-e2e-cypress": "^5.0.0-alpha.3",
     "@vue/cli-plugin-eslint": "^5.0.0-alpha.3",
     "@vue/cli-service": "^5.0.0-alpha.3",
     "babel-eslint": "^10.1.0",
