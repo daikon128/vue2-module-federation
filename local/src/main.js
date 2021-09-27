@@ -16,6 +16,17 @@ const TodoList = () => ({
 
 Vue.component('todo-list', TodoList)
 
+const BigAdsense = () => ({
+  component: import('remote/BigAdsense'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+Vue.component('big-adsense', BigAdsense)
+
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')

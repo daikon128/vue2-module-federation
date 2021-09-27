@@ -3,6 +3,7 @@
     page
     <custom-header></custom-header>
     <todo-list :todoList="todoList"></todo-list>
+    <big-adsense></big-adsense>
   </div>
 </template>
 
