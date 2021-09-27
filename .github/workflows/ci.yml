@@ -25,3 +25,26 @@ jobs:
           working-directory: remote2
           command: npm run test:ci
 
+  remote2-ci:
+    defaults:
+      run:
+        working-directory: ./remote2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build App
+        run: npm run build
+
+      - name: Start App
+        run: npm run start &
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: remote2
+          command: npm run test:c
