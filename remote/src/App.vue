@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <custom-button></custom-button>
+    <AdsenseSandBox></AdsenseSandBox>
   </div>
 </template>
 
 <script>
-import CustomButton from "./components/CustomButton";
+import AdsenseSandBox from "@/sandbox/AdsenseSandBox";
 
 export default {
   name: 'App',
   components: {
-    CustomButton,
+    AdsenseSandBox
   }
 }
 </script>

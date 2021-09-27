@@ -1,6 +1,42 @@
 name: ci
 on: [push]
 jobs:
+  remote-ci:
+    defaults:
+      run:
+        working-directory: ./remote
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: remote-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            remote-${{ runner.os }}-build-${{ env.cache-name }}-
+            remote-${{ runner.os }}-build-
+            remote-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build App
+        run: npm run build
+
+      - name: Start App
+        run: npm run start &
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: remote
+          command: npm run test:ci
+
   remote2-ci:
     defaults:
       run:
@@ -16,11 +52,11 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          key: remote2-${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            remote2-${{ runner.os }}-build-${{ env.cache-name }}-
+            remote2-${{ runner.os }}-build-
+            remote2-${{ runner.os }}-
 
       - name: Install dependencies
         run: npm install
