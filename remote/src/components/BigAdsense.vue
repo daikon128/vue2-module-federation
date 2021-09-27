@@ -1,6 +1,7 @@
 <template>
   <div name="big-adsense">
-    <span>大きなユーザ最適化された広告</span>
+    <div>大きなユーザ最適化された広告</div>
+    <div name="user-optimal-adsense">{{ userOptimalAdsense }}</div>
   </div>
 </template>
 
@@ -8,11 +9,16 @@
 export default {
   name: "BigAdsense",
   props: ['user'],
-  methods: {
-    // pickAdsenseFromUser(user) {
-    //   return
-    // }
+  computed: {
+    userOptimalAdsense() {
+      switch(this.user.id) {
+        case 1: return '車'
+        case 2: return 'ゲーム'
+        default: return '食品'
+      }
+    }
   }
+
 }
 </script>
 
