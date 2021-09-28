@@ -1,12 +1,14 @@
 <template>
   <fieldset>
     <div name="todo-list">TodoList dummy</div>
+    <div name="todo-content">{{ JSON.stringify(this.todoList) }}</div>
   </fieldset>
 </template>
 
 <script>
 export default {
-name: "TodoList"
+  name: "TodoList",
+  props: ['todoList']
 }
 </script>
 

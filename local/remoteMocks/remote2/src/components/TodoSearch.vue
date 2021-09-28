@@ -1,12 +1,18 @@
 <template>
   <fieldset>
     <div name="todo-search">TodoSearch dummy</div>
+    <button name="todo-search-button" @click="onTodoSearchButton">search todo mock</button>
   </fieldset>
 </template>
 
 <script>
 export default {
-name: "TodoSearch"
+  name: "TodoSearch",
+  methods: {
+    onTodoSearchButton() {
+      this.$emit('search-todo-list', [{ id:1, name: "name1", description: "description1"}])
+    }
+  }
 }
 </script>
 

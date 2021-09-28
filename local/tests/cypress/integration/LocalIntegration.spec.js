@@ -16,4 +16,16 @@ describe('local integration', () => {
     cy.get('[name="big-adsense"]')
       .should('exist')
   })
+
+  it('Todo検索がされる前に空のTodoListが反映されていること', () => {
+    cy.get('[name="todo-content"]')
+      .should('have.text', '[]')
+  })
+
+  it('Todo検索がされた際にTodoListに反映されること', () => {
+    cy.get('[name="todo-search-button"]')
+      .click()
+      .get('[name="todo-content"]')
+      .should('have.text', '[{"id":1,"name":"name1","description":"description1"}]')
+  })
 })

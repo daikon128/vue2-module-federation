@@ -1,6 +1,6 @@
 <template>
   <div>
-    <todo-search></todo-search>
+    <todo-search @search-todo-list="setTodoList"></todo-search>
     <todo-list :todoList="todoList"></todo-list>
     <big-adsense></big-adsense>
   </div>
@@ -12,6 +12,11 @@ export default {
   data() {
     return {
       todoList:[]
+    }
+  },
+  methods: {
+    setTodoList(todoList) {
+      this.todoList = todoList
     }
   }
 }

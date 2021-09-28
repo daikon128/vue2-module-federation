@@ -35,7 +35,8 @@ module.exports = {
         },
         filename: 'remote2.js',
         exposes: {
-          "./TodoList": "./src/components/TodoList"
+          "./TodoList": "./src/components/TodoList",
+          "./TodoSearch": "./src/components/TodoSearch"
         },
       }),
     ],

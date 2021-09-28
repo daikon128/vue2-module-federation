@@ -15,7 +15,7 @@ const TodoList = () => ({
 
 Vue.component('todo-list', TodoList)
 
-const TodoList = () => ({
+const TodoSearch = () => ({
   component: import('remote2/TodoSearch'),
   loading: LoadingComponent,
   error: ErrorComponent,
