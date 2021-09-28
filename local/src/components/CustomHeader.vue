@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" name="custom-header">
     <ul>
       <li>
         トップ
