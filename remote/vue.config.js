@@ -35,7 +35,7 @@ module.exports = {
         },
         filename: 'remote.js',
         exposes: {
-          "./CustomButton": "./src/components/CustomButton"
+          "./BigAdsense": "./src/components/BigAdsense"
         },
       }),
     ],
