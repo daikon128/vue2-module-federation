@@ -1,4 +1,4 @@
-describe('local integration', () => {
+describe('local page integration', () => {
   beforeEach(() => {
     cy.visit('/')
   })
