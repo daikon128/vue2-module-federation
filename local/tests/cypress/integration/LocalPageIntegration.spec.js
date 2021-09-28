@@ -8,7 +8,7 @@ describe('local page integration', () => {
   })
 
   it('トップ画面でTodo検索が表示されること', ()=> {
-    cy.get('[name="todo-search"]')
+    cy.get('[name="todo-search-button"]')
       .should('exist')
   })
 
