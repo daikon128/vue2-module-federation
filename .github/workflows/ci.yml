@@ -22,8 +22,8 @@ jobs:
             app-${{ runner.os }}-build-
             app-${{ runner.os }}-
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install all app dependencies
+        run: npm run install-all
 
       - name: Build App
         run: npm run build
