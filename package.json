@@ -18,7 +18,6 @@
     "start:remote2": "npm --prefix ./remote2 run start",
     "test:ci": "cypress run --spec 'tests/cypress/**/*.spec.js'",
     "install-all": "npm-run-all -s \"install:*\"",
-    "install:self": "npm install",
     "install:local": "npm --prefix ./local install",
     "install:remote": "npm --prefix ./remote install",
     "install:remote2": "npm --prefix ./remote2 install"
