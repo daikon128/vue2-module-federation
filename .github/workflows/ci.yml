@@ -28,8 +28,11 @@ jobs:
       - name: Build App
         run: npm run build
 
+      - name: Build Mock
+        run: npm run build:allMock
+
       - name: Start App
-        run: npm run serve:mocked &
+        run: npm run start:mocked &
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
