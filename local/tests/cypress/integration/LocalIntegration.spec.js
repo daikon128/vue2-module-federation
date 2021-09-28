@@ -7,6 +7,11 @@ describe('local integration', () => {
       .should('exist')
   })
 
+  it('トップ画面でTodo検索が表示されること', ()=> {
+    cy.get('[name="todo-search"]')
+      .should('exist')
+  })
+
   it('トップ画面で広告が表示されること', ()=> {
     cy.get('[name="big-adsense"]')
       .should('exist')

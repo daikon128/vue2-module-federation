@@ -13,8 +13,17 @@ const TodoList = () => ({
   timeout: 3000
 })
 
-
 Vue.component('todo-list', TodoList)
+
+const TodoList = () => ({
+  component: import('remote2/TodoSearch'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+Vue.component('todo-search', TodoSearch)
 
 const BigAdsense = () => ({
   component: import('remote/BigAdsense'),

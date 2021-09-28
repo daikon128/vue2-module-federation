@@ -1,5 +1,6 @@
 <template>
   <div>
+    <todo-search></todo-search>
     <todo-list :todoList="todoList"></todo-list>
     <big-adsense></big-adsense>
   </div>
