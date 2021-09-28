@@ -1,5 +1,7 @@
 <template>
-  <div>BigAdsense dummy</div>
+  <fieldset>
+    <div name="big-adsense">BigAdsense dummy</div>
+  </fieldset>
 </template>
 
 <script>
@@ -9,7 +11,7 @@ name: "BigAdsense"
 </script>
 
 <style scoped>
-body {
+fieldset {
   background: repeating-linear-gradient(
       45deg,
       #ffffff,

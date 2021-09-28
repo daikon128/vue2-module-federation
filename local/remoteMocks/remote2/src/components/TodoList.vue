@@ -1,6 +1,7 @@
 <template>
-
-  <div>TodoList dummy</div>
+  <fieldset>
+    <div name="todo-list">TodoList dummy</div>
+  </fieldset>
 </template>
 
 <script>
@@ -10,7 +11,7 @@ name: "TodoList"
 </script>
 
 <style scoped>
-body {
+fieldset {
   background: repeating-linear-gradient(
       45deg,
       #ffffff,
