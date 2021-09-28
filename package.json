@@ -4,10 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "npm-run-all -p \"serve:*\"",
-    "serve:local": "npm --prefix ./local run serve",
-    "serve:remote": "npm --prefix ./remote run serve",
-    "serve:remote2": "npm --prefix ./remote2 run serve",
     "build": "npm-run-all -p \"build:*\"",
     "build:local": "npm --prefix ./local run build",
     "build:remote": "npm --prefix ./remote run build",
