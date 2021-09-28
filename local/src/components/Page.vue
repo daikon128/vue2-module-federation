@@ -2,7 +2,7 @@
   <div>
     <todo-search @search-todo-list="setTodoList"></todo-search>
     <todo-list :todoList="todoList"></todo-list>
-    <big-adsense></big-adsense>
+    <big-adsense :user="user"></big-adsense>
   </div>
 </template>
 
@@ -11,10 +11,17 @@ export default {
   name: "Page",
   data() {
     return {
-      todoList:[]
+      todoList:[],
+      user:{}
     }
   },
+  created() {
+    this.login()
+  },
   methods: {
+    login() {
+      this.user = {id:1, name:"user1" }
+    },
     setTodoList(todoList) {
       this.todoList = todoList
     }

@@ -1,12 +1,24 @@
 <template>
   <fieldset>
     <div name="big-adsense">BigAdsense dummy</div>
+    <div name="user-optimal-adsense">{{ userOptimalAdsense }}</div>
   </fieldset>
 </template>
 
 <script>
 export default {
-name: "BigAdsense"
+  name: "BigAdsense",
+  props: ['user'],
+  computed: {
+    userOptimalAdsense() {
+      switch(this.user.id) {
+        case 1: return '車'
+        case 2: return 'ゲーム'
+        default: return '食品'
+      }
+    }
+  }
+
 }
 </script>
 

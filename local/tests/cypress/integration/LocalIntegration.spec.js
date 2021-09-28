@@ -17,6 +17,12 @@ describe('local integration', () => {
       .should('exist')
   })
 
+  it('ユーザ１がログインした状態の場合、広告に車が表示されること', ()=> {
+    cy.get('[name="big-adsense"]')
+      .get('[name="user-optimal-adsense"]')
+      .should('have.text', '車')
+  })
+
   it('Todo検索がされる前に空のTodoListが反映されていること', () => {
     cy.get('[name="todo-content"]')
       .should('have.text', '[]')
