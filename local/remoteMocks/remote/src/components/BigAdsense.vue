@@ -1,11 +1,10 @@
 <template>
-
-  <div>TodoList dummy</div>
+  <div>BigAdsense dummy</div>
 </template>
 
 <script>
 export default {
-name: "TodoList"
+name: "BigAdsense"
 }
 </script>
 
