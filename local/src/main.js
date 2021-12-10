@@ -5,15 +5,36 @@ import ErrorComponent from "@/components/ErrorComponent";
 
 Vue.config.productionTip = false
 
-const CustomButton = () => ({
-  component: import('remote/CustomButton'),
+const TodoList = () => ({
+  component: import('remote2/TodoList'),
   loading: LoadingComponent,
   error: ErrorComponent,
   delay: 200,
   timeout: 3000
 })
 
-Vue.component('custom-button', CustomButton)
+Vue.component('todo-list', TodoList)
+
+const TodoSearch = () => ({
+  component: import('remote2/TodoSearch'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+Vue.component('todo-search', TodoSearch)
+
+const BigAdsense = () => ({
+  component: import('remote/BigAdsense'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+Vue.component('big-adsense', BigAdsense)
+
 
 new Vue({
   render: h => h(App),

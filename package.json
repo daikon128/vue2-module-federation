@@ -1,0 +1,35 @@
+{
+  "name": "vue2-module-federation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all -p \"build:*\"",
+    "build:local": "npm --prefix ./local run build",
+    "build:remote": "npm --prefix ./remote run build",
+    "build:remote2": "npm --prefix ./remote2 run build",
+    "start": "npm-run-all -p \"start:*\"",
+    "start:local": "npm --prefix ./local run start",
+    "start:remote": "npm --prefix ./remote run start",
+    "start:remote2": "npm --prefix ./remote2 run start",
+    "test:ci": "cypress run --spec 'tests/cypress/**/*.spec.js'",
+    "install-all": "npm-run-all -p \"install:*\"",
+    "install:local": "npm --prefix ./local install",
+    "install:remote": "npm --prefix ./remote install",
+    "install:remote2": "npm --prefix ./remote2 install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daikon128/vue2-module-federation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daikon128/vue2-module-federation/issues"
+  },
+  "homepage": "https://github.com/daikon128/vue2-module-federation#readme",
+  "devDependencies": {
+    "cypress": "^8.5.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

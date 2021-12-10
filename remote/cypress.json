@@ -1,0 +1,11 @@
+{
+  "integrationFolder": "./",
+  "baseUrl": "http://localhost:8888",
+  "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+  "pluginsFile": "./tests/cypress/plugins/index.js",
+  "fixturesFolder": false,
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "supportFile": false,
+  "testFiles": "**/*.spec.js"
+}

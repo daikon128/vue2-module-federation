@@ -7,10 +7,10 @@ module.exports = {
     },
   },
   devServer: {
-    port:8888
+    port:8899
   },
   filenameHashing: true,
-  publicPath: "http://localhost:8888/",
+  publicPath: "http://localhost:8899/",
   configureWebpack: {
     module: {
       rules: [
@@ -28,14 +28,15 @@ module.exports = {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'remote',
+        name: 'remote2',
         library: {
           type: 'var',
-          name: 'remote'
+          name: 'remote2'
         },
-        filename: 'remote.js',
+        filename: 'remote2.js',
         exposes: {
-          "./BigAdsense": "./src/components/BigAdsense"
+          "./TodoList": "./src/components/TodoList",
+          "./TodoSearch": "./src/components/TodoSearch"
         },
       }),
     ],

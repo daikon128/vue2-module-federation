@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <AdsenseSandBox></AdsenseSandBox>
+    <big-adsense></big-adsense>
   </div>
 </template>
 
 <script>
-import AdsenseSandBox from "@/sandbox/AdsenseSandBox";
+import BigAdsense from "./components/BigAdsense";
 
 export default {
   name: 'App',
   components: {
-    AdsenseSandBox
+    BigAdsense,
   }
 }
 </script>

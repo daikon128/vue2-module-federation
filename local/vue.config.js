@@ -29,7 +29,8 @@ module.exports = {
       new ModuleFederationPlugin({
         filename: 'remote.js',
         remotes: {
-          remote: 'remote@http://localhost:8888/remote.js'
+          remote: 'remote@http://localhost:8888/remote.js',
+          remote2: 'remote2@http://localhost:8899/remote2.js'
         },
       }),
     ],
