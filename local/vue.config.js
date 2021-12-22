@@ -27,11 +27,12 @@ module.exports = {
     },
     plugins: [
       new ModuleFederationPlugin({
-        filename: 'remote.js',
+        filename: 'remoteEntry.js',
         remotes: {
-          remote: 'remote@http://localhost:8888/remote.js',
-          remote2: 'remote2@http://localhost:8899/remote2.js'
-        },
+          remote: 'remote@http://localhost:8888/remoteEntry.js',
+          remote2: 'remote2@http://localhost:8899/remoteEntry.js',
+          remote_vue3: 'remote_vue3@http://localhost:8999/remoteEntry.js'
+        }
       }),
     ],
   }

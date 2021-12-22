@@ -11,6 +11,9 @@ export default {
   props: ['user'],
   computed: {
     userOptimalAdsense() {
+      if (this.user == null) {
+        return "none"
+      }
       switch(this.user.id) {
         case 1: return '車'
         case 2: return 'ゲーム'

@@ -29,15 +29,12 @@ module.exports = {
     plugins: [
       new ModuleFederationPlugin({
         name: 'remote2',
-        library: {
-          type: 'var',
-          name: 'remote2'
-        },
-        filename: 'remote2.js',
+        filename: "remoteEntry.js",
+        library: { type: 'var', name: 'vue2App' },
         exposes: {
           "./TodoList": "./src/components/TodoList",
           "./TodoSearch": "./src/components/TodoSearch"
-        },
+        }
       }),
     ],
   }

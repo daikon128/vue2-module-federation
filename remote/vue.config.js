@@ -33,7 +33,7 @@ module.exports = {
           type: 'var',
           name: 'remote'
         },
-        filename: 'remote.js',
+        filename: "remoteEntry.js",
         exposes: {
           "./BigAdsense": "./src/components/BigAdsense"
         },
