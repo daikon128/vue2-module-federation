@@ -21,6 +21,9 @@ module.exports = {
         },
       ]
     },
+    optimization: {
+      splitChunks: false
+    },
     plugins: [
       new ModuleFederationPlugin({
         name: 'remote2',
@@ -28,7 +31,7 @@ module.exports = {
           type: 'var',
           name: 'remote2'
         },
-        filename: 'remote2.js',
+        filename: 'remoteEntry.js',
         exposes: {
           "./TodoList": "./src/components/TodoList",
           "./TodoSearch": "./src/components/TodoSearch"
