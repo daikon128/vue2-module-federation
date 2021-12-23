@@ -1,4 +1,5 @@
 const { ModuleFederationPlugin } = require('webpack').container;
+const deps = require('./package.json').dependencies;
 
 module.exports = {
   pages: {
@@ -37,7 +38,9 @@ module.exports = {
         },
         shared: {
           vue: {
-            singleton: true
+            requiredVersion: deps.vue,
+            singleton: true,
+            eager: false
           }
         }
       }),
