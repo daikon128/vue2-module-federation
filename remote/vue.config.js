@@ -1,4 +1,5 @@
 const { ModuleFederationPlugin } = require('webpack').container;
+const deps = require('./package.json').dependencies;
 
 module.exports = {
   pages: {
@@ -40,6 +41,11 @@ module.exports = {
         exposes: {
           "./BigAdsense": "./src/components/BigAdsense"
         },
+        shared: {
+          vue: {
+            requiredVersion: deps.vue
+          }
+        }
       }),
     ],
   }

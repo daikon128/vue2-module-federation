@@ -1,4 +1,5 @@
 const { ModuleFederationPlugin } = require('webpack').container;
+const deps = require('./package.json').dependencies;
 
 module.exports = {
   pages: {
@@ -32,6 +33,11 @@ module.exports = {
           remote: 'remote@http://localhost:8888/remoteEntry.js',
           remote2: 'remote2@http://localhost:8899/remoteEntry.js',
           remote_vue3: 'remote_vue3@http://localhost:8999/remoteEntry.js'
+        },
+        shared: {
+          vue: {
+            requiredVersion: deps.vue
+          }
         }
       }),
     ],

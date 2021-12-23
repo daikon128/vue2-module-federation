@@ -38,9 +38,7 @@ module.exports = {
         },
         shared: {
           vue: {
-            requiredVersion: deps.vue,
-            singleton: true,
-            eager: false
+            requiredVersion: deps.vue
           }
         }
       }),
