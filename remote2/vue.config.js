@@ -26,11 +26,14 @@ module.exports = {
         'vue$': 'vue/dist/vue.esm.js',
       }
     },
+    optimization: {
+      splitChunks: false
+    },
     plugins: [
       new ModuleFederationPlugin({
         name: 'remote2',
         filename: "remoteEntry.js",
-        library: { type: 'var', name: 'vue2App' },
+        library: { type: 'var', name: 'remote2' },
         exposes: {
           "./TodoList": "./src/components/TodoList",
           "./TodoSearch": "./src/components/TodoSearch"

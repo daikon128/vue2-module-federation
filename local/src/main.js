@@ -35,6 +35,15 @@ const BigAdsense = () => ({
 
 Vue.component('big-adsense', BigAdsense)
 
+const Vue3Button = () => ({
+  component: import('remote_vue3/Vue3Button'),
+  loading: LoadingComponent,
+  error: ErrorComponent,
+  delay: 200,
+  timeout: 3000
+})
+
+Vue.component('vue3-button', Vue3Button)
 
 new Vue({
   render: h => h(App),

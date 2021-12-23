@@ -3,6 +3,7 @@
     <todo-search @search-todo-list="setTodoList"></todo-search>
     <todo-list :todoList="todoList"></todo-list>
     <big-adsense :user="user"></big-adsense>
+    <vue3-button>button</vue3-button>
   </div>
 </template>
 

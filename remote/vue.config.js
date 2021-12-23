@@ -26,6 +26,9 @@ module.exports = {
         'vue$': 'vue/dist/vue.esm.js',
       }
     },
+    optimization: {
+      splitChunks: false
+    },
     plugins: [
       new ModuleFederationPlugin({
         name: 'remote',
